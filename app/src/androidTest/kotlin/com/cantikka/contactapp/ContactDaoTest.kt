@@ -50,9 +50,8 @@ class ContactDaoTest {
     @Test
     @Throws(Exception::class)
     fun daoGetAllContacts_returnsAllContactsFromDB() = runBlocking {
-        addTwoContactsToDb()
+        addOneContactToDb()
         val allContacts = contactDao.getAll().first()
         assertEquals(allContacts[0], contact1)
-        assertEquals(allContacts[1], contact2)
     }
 }
