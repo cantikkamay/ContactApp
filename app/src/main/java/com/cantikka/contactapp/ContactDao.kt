@@ -1,6 +1,5 @@
 package com.cantikka.contactapp
 
-import androidx.lifecycle.LiveData
 import androidx.room.*
 import kotlinx.coroutines.flow.Flow
 
@@ -11,10 +10,4 @@ interface ContactDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(contact: Contact)
-
-    @Delete
-    suspend fun delete(contact: Contact)
-
-    @Update
-    suspend fun update(contact: Contact)
 }
